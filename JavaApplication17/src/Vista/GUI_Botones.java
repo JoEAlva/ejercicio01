@@ -8,7 +8,7 @@ package Vista;
 import Controlador.Controlador_FRM_MantenimientoCursos;
 import Controlador.Controlador_FRM_MantenimientoEstudiantes;
 import Controlador.Controlador_FRM_Matricula;
-
+import Controlador.Controlador_FRM_MantenimientoUsuarios;
 /**
  *
  * @author tecnologiamultimedia
@@ -21,7 +21,10 @@ public class GUI_Botones extends javax.swing.JPanel {
     Controlador_FRM_MantenimientoEstudiantes controlador;
     Controlador_FRM_MantenimientoCursos controladorCursos;
     Controlador_FRM_Matricula controladorMatricula;
+    Controlador_FRM_MantenimientoUsuarios controlador_FRM_MantenimientoUsuarios;
     
+  
+ 
     public GUI_Botones() {
         initComponents();
     }
@@ -48,6 +51,15 @@ public class GUI_Botones extends javax.swing.JPanel {
         this.btn_Agregar.addActionListener(controlador);
         this.btn_Modificar.addActionListener(controlador);
         this.btn_Eliminar.addActionListener(controlador);
+    }
+    public void agregarEventos(Controlador_FRM_MantenimientoUsuarios controlador_FRM_MantenimientoUsuarios)
+    {
+        this.controlador_FRM_MantenimientoUsuarios = this.controlador_FRM_MantenimientoUsuarios;
+        this.btn_Agregar.addActionListener(controlador_FRM_MantenimientoUsuarios);
+        this.btn_Consultar.addActionListener(controlador_FRM_MantenimientoUsuarios);
+        this.btn_Modificar.addActionListener(controlador_FRM_MantenimientoUsuarios);
+        this.btn_Eliminar.addActionListener(controlador_FRM_MantenimientoUsuarios);
+        
     }
     public void estadoInicial()
     {

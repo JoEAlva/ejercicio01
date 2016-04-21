@@ -32,6 +32,7 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
         this.jm_Estudiantes.addActionListener(controlador_FRM_MenuPrincipal);
         this.jm_Cursos.addActionListener(controlador_FRM_MenuPrincipal);
         this.jm_Matricula.addActionListener(controlador_FRM_MenuPrincipal);
+        this.jM_Usuarios.addActionListener(controlador_FRM_MenuPrincipal);
     }
 
     /**
