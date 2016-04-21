@@ -11,16 +11,26 @@ package Modelo;
  */
 public class Usuario {
  
+    private String idUsuario;
     private String nombreCompleto;
     private String nombreUsuario;
     private String contrasena;
     private String tipo;
 
-    public Usuario(String nombreCompleto, String nombreUsuario, String contrasena, String tipo) {
+    public Usuario(String idUsuario, String nombreCompleto, String nombreUsuario, String contrasena, String tipo) {
+        this.idUsuario = idUsuario;
         this.nombreCompleto = nombreCompleto;
         this.nombreUsuario = nombreUsuario;
         this.contrasena = contrasena;
         this.tipo = tipo;
+    }
+
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNombreCompleto() {
