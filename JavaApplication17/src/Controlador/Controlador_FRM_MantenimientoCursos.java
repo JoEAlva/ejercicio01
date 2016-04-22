@@ -54,7 +54,7 @@ public class Controlador_FRM_MantenimientoCursos implements ActionListener{
             }
             else
             {
-                metodos.mensaje();
+                metodos.mensajeConsultar();
                 frm_MantenimientoCursos.limpiarCampos();
             }
         }

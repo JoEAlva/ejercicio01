@@ -53,7 +53,7 @@ public class Controlador_FRM_MantenimientoEstudiantes implements ActionListener{
             }
             else
             {
-                metodos.mensaje();
+                metodos.mensajeConsultar();
                 mantenimientoEstudiantes.limpiarCampos();
             }           
         }
@@ -65,7 +65,7 @@ public class Controlador_FRM_MantenimientoEstudiantes implements ActionListener{
             }
             else
             {
-                metodos.mensaje();
+                metodos.mensajeConsultar();
                 mantenimientoEstudiantes.limpiarCampos();
             }
             
@@ -97,7 +97,7 @@ public class Controlador_FRM_MantenimientoEstudiantes implements ActionListener{
             }
             else
             {
-                metodos.mensaje();
+                metodos.mensajeConsultar();
                 mantenimientoEstudiantes.limpiarCampos();
             }
         

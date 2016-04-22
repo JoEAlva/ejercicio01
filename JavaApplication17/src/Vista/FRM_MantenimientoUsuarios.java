@@ -19,8 +19,39 @@ public class FRM_MantenimientoUsuarios extends javax.swing.JFrame {
     public FRM_MantenimientoUsuarios() {
         initComponents();
         cfrmmu = new Controlador_FRM_MantenimientoUsuarios(this);
-        this.gUI_Botones1.agregarEventos(cfrmmu);
-                
+        this.gUI_Botones1.agregarEventos(cfrmmu);            
+    }
+    
+    /*
+    
+    */
+    public String[] devolverInfoUsuario()
+    {
+        return this.gUI_InformacionUsuario2.devolverInfoUsuario();
+    }
+    
+    /*
+    
+    */
+    public void mostrarInfoPantalla(String arregloUsuario[])
+    {
+        this.gUI_InformacionUsuario2.mostrarInfoPantalla(arregloUsuario);
+    }
+    
+    /*
+    
+    */
+    public String devolverIdUsuario()
+    {
+        return this.gUI_InformacionUsuario2.devolverIdUsuario();
+    }
+    
+    /*
+    
+    */
+    public void limpiarCampos()
+    {
+        this.gUI_InformacionUsuario2.limpiarCampos();
     }
 
     /**

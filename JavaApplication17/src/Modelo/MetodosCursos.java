@@ -67,6 +67,8 @@ public class MetodosCursos {
                 arrayCursos.get(contador).setNombre(arreglo[1]);
                 arrayCursos.get(contador).setCreditos(Integer.parseInt(arreglo[2]));
                 arrayCursos.get(contador).setHorario(arreglo[3]);
+                mensajejUsuario();
+                contador = arrayCursos.size();
             }
         }
     }
@@ -77,7 +79,9 @@ public class MetodosCursos {
             if(arrayCursos.get(contador).getSigla().equals(arreglo[0]))
             {
                 arrayCursos.remove(contador);
-            }
+                mensajejUsuario();
+                contador = arrayCursos.size();
+            } 
         }
     }
     
@@ -94,11 +98,17 @@ public class MetodosCursos {
         return this.arregloInformacionConsultada;
     }
     
-    public void mensaje()
+    public void mensajeConsultar()
     {
-        JOptionPane.showMessageDialog(null, "El estudiante no"
+        JOptionPane.showMessageDialog(null, "El curso no"
                         + " se encuentra registrado.", "Universidad de"
                                 + " Costa Rica", JOptionPane.OK_OPTION);
+    }
+    
+    public void mensajejUsuario()
+    {
+        JOptionPane.showMessageDialog(null, "Acción realizada correctamente",
+        "Universidad de Costa Rica", JOptionPane.INFORMATION_MESSAGE);
     }
     
 }

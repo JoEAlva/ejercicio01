@@ -52,6 +52,7 @@ public class MetodosEstudiantes {
                 arregloInformacionConsultada[0]=arrayEstudiantes.get(contador).getNombreCompleto();
                 arregloInformacionConsultada[1]=arrayEstudiantes.get(contador).getDireccion();
                 existe=true;
+                contador = arrayEstudiantes.size();
                 
             }
         }
@@ -65,9 +66,8 @@ public class MetodosEstudiantes {
             {
                 arrayEstudiantes.get(contador).setNombreCompleto(arreglo[1]);
                 arrayEstudiantes.get(contador).setDireccion(arreglo[2]);
-                JOptionPane.showMessageDialog(null, "El estudiante "
-                        + " fue modificado en el registro.", "Universidad de"
-                                + " Costa Rica", JOptionPane.OK_OPTION);
+                mensajejUsuario();
+                contador = arrayEstudiantes.size();
             }
         }
     }
@@ -78,9 +78,8 @@ public class MetodosEstudiantes {
             if(arrayEstudiantes.get(contador).getCedula().equals(arreglo[0]))
             {
                 arrayEstudiantes.remove(contador);
-                JOptionPane.showMessageDialog(null, "El estudiante "
-                        + " fue eliminado del registro.", "Universidad de"
-                                + " Costa Rica", JOptionPane.OK_OPTION);
+                mensajejUsuario();
+                contador = arrayEstudiantes.size();
             }
         }
     }//Fin eliminarEstudiante
@@ -103,11 +102,17 @@ public class MetodosEstudiantes {
         }
     }
     
-    public void mensaje()
+    public void mensajeConsultar()
     {
         JOptionPane.showMessageDialog(null, "El estudiante no"
                         + " se encuentra registrado.", "Universidad de"
                                 + " Costa Rica", JOptionPane.OK_OPTION);
+    }
+    
+    public void mensajejUsuario()
+    {
+        JOptionPane.showMessageDialog(null, "Acción realizada correctamente",
+        "Universidad de Costa Rica", JOptionPane.INFORMATION_MESSAGE);
     }
      
 }//Fin de la clase MetodosEstudiante
