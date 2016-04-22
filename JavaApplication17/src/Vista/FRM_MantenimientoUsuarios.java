@@ -41,14 +41,6 @@ public class FRM_MantenimientoUsuarios extends javax.swing.JFrame {
     /*
     
     */
-    public String devolverIdUsuario()
-    {
-        return this.gUI_InformacionUsuario2.devolverIdUsuario();
-    }
-    
-    /*
-    
-    */
     public void limpiarCampos()
     {
         this.gUI_InformacionUsuario2.limpiarCampos();

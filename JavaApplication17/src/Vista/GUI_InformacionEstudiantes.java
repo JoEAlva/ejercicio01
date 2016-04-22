@@ -54,6 +54,10 @@ public class GUI_InformacionEstudiantes extends javax.swing.JPanel {
         this.jt_NombreCompleto.setText("");
         this.jt_Direccion.setText("");
     }
+    
+    /*
+    Método que comprueba si todos los campos se encuentran llenos
+    */
 
     /**
      * This method is called from within the constructor to initialize the form.

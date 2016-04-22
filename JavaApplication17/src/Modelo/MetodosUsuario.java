@@ -29,12 +29,12 @@ public class MetodosUsuario
     /*
     Busca un estudiante en el arrayList 
     */
-    public boolean consultarUsuario(String idUsuario)
+    public boolean consultarUsuario(String arregloInfo[])
     {
         boolean exist = false;
         for(int j=0; j<arrayUsuario.size(); j++)
         {
-            if(arrayUsuario.get(j).getIdUsuario().equals(idUsuario))
+            if(arrayUsuario.get(j).getIdUsuario().equals(arregloInfo[0]))
             {
                 arregloUsuario[0] = arrayUsuario.get(j).getNombreCompleto();
                 arregloUsuario[1] = arrayUsuario.get(j).getNombreUsuario();

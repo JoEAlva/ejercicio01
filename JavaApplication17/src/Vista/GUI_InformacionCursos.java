@@ -57,6 +57,11 @@ public class GUI_InformacionCursos extends javax.swing.JPanel {
         this.jcb_Creditos.setSelectedIndex(5);
         this.jt_Horario.setText("");
     }
+    
+    /*
+    Método que comprueba si todos los campos se encuentran llenos
+    */
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

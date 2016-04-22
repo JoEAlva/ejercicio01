@@ -33,7 +33,7 @@ public class Controlador_FRM_MantenimientoUsuarios implements ActionListener
         if(e.getActionCommand().equals("Consultar"))
         {
             System.out.println("C");
-            if(metodosUsuario.consultarUsuario(fRM_MantenimientoUsuarios.devolverIdUsuario()))
+            if(metodosUsuario.consultarUsuario(fRM_MantenimientoUsuarios.devolverInfoUsuario()))
             {
                 fRM_MantenimientoUsuarios.mostrarInfoPantalla(metodosUsuario.devolverArregloUsuario());
             }
@@ -45,14 +45,19 @@ public class Controlador_FRM_MantenimientoUsuarios implements ActionListener
         if(e.getActionCommand().equals("Agregar"))
         {
             System.out.println("A");
+            metodosUsuario.agregarUsuario(fRM_MantenimientoUsuarios.devolverInfoUsuario());
+            fRM_MantenimientoUsuarios.limpiarCampos();
         }
         if(e.getActionCommand().equals("Modificar"))
         {
             System.out.println("M");
+            metodosUsuario.modificarUsuario(metodosUsuario.devolverArregloUsuario());
+            fRM_MantenimientoUsuarios.limpiarCampos();
         }
         if(e.getActionCommand().equals("Eliminar"))
         {
             System.out.println("E");
+            metodosUsuario.eliminarUsuario(fRM_MantenimientoUsuarios.devolverInfoUsuario());
         }
     }
     

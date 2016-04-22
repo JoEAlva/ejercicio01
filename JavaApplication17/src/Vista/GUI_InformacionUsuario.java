@@ -45,14 +45,6 @@ public class GUI_InformacionUsuario extends javax.swing.JPanel {
     }
     
     /*
-    Método que devueve el id del usuario mediante un String
-    */
-    public String devolverIdUsuario() 
-    {
-        return this.jT_IdUsuario.getText();
-    }
-    
-    /*
     Método que limpia los jT
     */
     public void limpiarCampos()
@@ -83,6 +75,10 @@ public class GUI_InformacionUsuario extends javax.swing.JPanel {
         }
         this.jC_TipoUsuario.setSelectedIndex(2);
     }
+    
+    /*
+    Método que comprueba si todos los campos se encuentran llenos
+    */
 
     /**
      * This method is called from within the constructor to initialize the form.
