@@ -58,6 +58,7 @@ public class Controlador_FRM_MantenimientoUsuarios implements ActionListener
         {
             System.out.println("E");
             metodosUsuario.eliminarUsuario(fRM_MantenimientoUsuarios.devolverInfoUsuario());
+            fRM_MantenimientoUsuarios.limpiarCampos();
         }
     }
     

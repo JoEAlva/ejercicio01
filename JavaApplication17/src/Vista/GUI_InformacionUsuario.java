@@ -24,11 +24,12 @@ public class GUI_InformacionUsuario extends javax.swing.JPanel {
     */
     public String[] devolverInfoUsuario()
     {
-        String arregloUsuario[] = new String[4];
-        arregloUsuario[0] = this.jT_NombreCompleto.getText();
-        arregloUsuario[1] = this.jT_NombreUsuario.getText();
-        arregloUsuario[2] = this.jT_Contrasena.getText();
-        arregloUsuario[3] = ""+this.jC_TipoUsuario.getSelectedIndex();
+        String arregloUsuario[] = new String[5];
+        arregloUsuario[0] = this.jT_IdUsuario.getText();
+        arregloUsuario[1] = this.jT_NombreCompleto.getText();
+        arregloUsuario[2] = this.jT_NombreUsuario.getText();
+        arregloUsuario[3] = this.jT_Contrasena.getText();
+        arregloUsuario[4] = ""+this.jC_TipoUsuario.getSelectedIndex();
         return arregloUsuario;
     }
     
@@ -39,9 +40,8 @@ public class GUI_InformacionUsuario extends javax.swing.JPanel {
     {
         this.jT_NombreCompleto.setText(arregloUsuario[0]);
         this.jT_NombreUsuario.setText(arregloUsuario[1]);
-        this.jT_NombreUsuario.setText(arregloUsuario[2]);
-        this.jT_IdUsuario.setText(arregloUsuario[3]);
-        this.jC_TipoUsuario.setSelectedIndex(Integer.parseInt(arregloUsuario[4]));
+        this.jT_Contrasena.setText(arregloUsuario[2]);
+        this.jC_TipoUsuario.setSelectedIndex(Integer.parseInt(arregloUsuario[3]));
     }
     
     /*
@@ -52,8 +52,10 @@ public class GUI_InformacionUsuario extends javax.swing.JPanel {
         this.jT_IdUsuario.setText("");
         this.jT_NombreCompleto.setText("");
         this.jT_IdUsuario.setText("");
+        this.jC_TipoUsuario.setSelectedIndex(1);
         this.jT_NombreUsuario.setText("");
-        this.jC_TipoUsuario.setSelectedIndex(5);
+        this.jT_Contrasena.setText("");
+        
     }
     
     /*
