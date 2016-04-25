@@ -28,11 +28,11 @@ public class ArchivosCursos {
         try
         {
             salida = new ObjectOutputStream( new FileOutputStream("archivosCursos.dat") );
-            System.out.println("Se creó el archivo ");
+            System.out.println("Se creó el archivo curso");
         }
         catch(Exception e)
         {
-            System.out.println("No se creó el archivo " + e);
+            System.out.println("No se creó el archivo curso " + e);
         }
     }//Fin crearArchivosCursos
     
@@ -44,11 +44,11 @@ public class ArchivosCursos {
         try
         {
             salida.writeObject(curso);
-            System.out.println("Se escribió en el archivo");
+            System.out.println("Se escribió en el archivo curso");
         }
         catch(Exception e)
         {
-            System.out.println("Error al escribir en el archivo " + e);
+            System.out.println("Error al escribir en el archivo curso " + e);
         }
     }//Fin escribirInfoArchivoCursos
     
@@ -62,11 +62,11 @@ public class ArchivosCursos {
         {
             entrada = new ObjectInputStream( new FileInputStream("archivosCursos.dat") );
             exist = true;
-            System.out.println("Error al cargar la información al archivo");
+            System.out.println("Se cargó cargó la información del archivo curso");
         }
         catch(Exception e)
         {
-            System.out.println("Error al cargar el archivo " + e);
+            System.out.println("Error al cargar el archivo curso " + e);
         }
         return exist;
     }//Fin cargarInfoCursosArchivo
@@ -83,7 +83,7 @@ public class ArchivosCursos {
         }
         catch(Exception e)
         {
-            System.out.println("Se llegó al final del archivo "+ e);
+            System.out.println("Se llegó al final del archivo curso "+ e);
         }
         return arrayCursos;
     }

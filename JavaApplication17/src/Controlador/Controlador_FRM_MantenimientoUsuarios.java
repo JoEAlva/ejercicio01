@@ -9,6 +9,7 @@ import Modelo.MetodosUsuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Vista.FRM_MantenimientoUsuarios;
+import Modelo.ArchivosUsuario;
 /**
  *
  * @author JorgeIgnacio
@@ -17,12 +18,24 @@ public class Controlador_FRM_MantenimientoUsuarios implements ActionListener
 {   
     // Referencias
     FRM_MantenimientoUsuarios fRM_MantenimientoUsuarios;
-    MetodosUsuario metodosUsuario;
+    public MetodosUsuario metodosUsuario;
+    ArchivosUsuario archivosUsuario;
+    
     
     // Contructor
     public Controlador_FRM_MantenimientoUsuarios(FRM_MantenimientoUsuarios fRM_MantenimientoUsuarios) { 
         this.fRM_MantenimientoUsuarios=fRM_MantenimientoUsuarios;
         metodosUsuario=new MetodosUsuario();
+        archivosUsuario = new ArchivosUsuario();
+        if(archivosUsuario.cargarArchivoUsuario())
+        {
+            System.out.println("Se cargó el archivo usuario correctamente(controlador)");
+        }
+        else
+        {
+            System.out.println("Error al cargar el archivo usuario(controlador)");
+        }
+        metodosUsuario.setArrayUsuario(archivosUsuario.leerArchivoUsuario());
     }
     
     /*

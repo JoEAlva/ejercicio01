@@ -25,11 +25,11 @@ public class ArchivosMatricula {
         try
         {
             salida = new ObjectOutputStream(new FileOutputStream("archivosMatricula.dat"));
-            System.out.println("Se creó el archivo correctamrente");
+            System.out.println("Se creó el archivo matrícula correctamrente");
         }
         catch(Exception e)
         {
-            System.out.println("Error al crear el archivo "+e);
+            System.out.println("Error al crear el archivo matrícula "+e);
         }
     }
     
@@ -38,11 +38,11 @@ public class ArchivosMatricula {
         try
         {
             salida.writeObject(matricula);
-            System.out.println("Se escribió en el archivo");
+            System.out.println("Se escribió en el archivo matrícula");
         }
         catch(Exception e)
         {
-            System.out.println("Se escribió en el archivo "+e);
+            System.out.println("Error al escribir en el archivo matrícula"+e);
         }
     }
     
@@ -56,7 +56,7 @@ public class ArchivosMatricula {
         }
         catch(Exception e)
         {
-            System.out.println("Error al cargar el archivo "+e);
+            System.out.println("Error al cargar el archivo matrícula"+e);
         }
         return exist;
     }
@@ -70,7 +70,7 @@ public class ArchivosMatricula {
         }
         catch(Exception e)
         {
-            System.out.println("Error al leer la información del archivo "+e);
+            System.out.println("Error al leer la información del archivo matrícula "+e);
         }
         return arrayMatricula;
     }

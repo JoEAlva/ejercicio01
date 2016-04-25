@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Vista;
+import Controlador.Controlador_FRM_UsuarioLogin;
 
 /**
  *
@@ -11,12 +12,38 @@ package Vista;
  */
 public class GUI_LoginUsuario extends javax.swing.JPanel {
 
+    Controlador_FRM_UsuarioLogin controlador_FRM_UsuarioLogin;
     /**
      * Creates new form GUI_LoginUsuario
      */
     public GUI_LoginUsuario() {
         initComponents();
+        
     }
+    
+    public String[] devolverInfoLogin()
+    {
+   
+        char[] pass = this.jP_Contrasena.getPassword();
+        String passString = new String(pass);
+
+        String arregloLogin[] = new String[2];
+        
+        arregloLogin[0] = this.jT_Usuario.getText();
+        arregloLogin[1] = passString;
+        
+        System.out.println("Esta es el usuario " + arregloLogin[0] );
+        System.out.println("Esta es la password " + arregloLogin[1] );
+        return arregloLogin;
+    }
+    
+    public void agregarEventos(Controlador_FRM_UsuarioLogin controlador_FRM_UsuarioLogin)
+    {
+        this.controlador_FRM_UsuarioLogin = controlador_FRM_UsuarioLogin;
+        this.jB_Login.addActionListener(controlador_FRM_UsuarioLogin);
+    }
+    
+      
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,6 +61,8 @@ public class GUI_LoginUsuario extends javax.swing.JPanel {
         jB_Login = new javax.swing.JButton();
 
         jL_Usuario.setText("Usuario");
+
+        jP_Contrasena.setName("jT_pass"); // NOI18N
 
         jL_Contrasena.setText("Contraseña");
 

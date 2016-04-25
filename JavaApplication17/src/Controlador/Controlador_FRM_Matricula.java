@@ -38,10 +38,10 @@ public class Controlador_FRM_Matricula implements ActionListener{
         archivosMatricula = new ArchivosMatricula();
         if(archivosMatricula.cargarInfoArchivoMatricula())
         {
-            System.out.println("Se cargó correctamente el archivo(controlador)");
+            System.out.println("Se cargó correctamente el archivo matrícula(controlador)");
         }else
         {
-            System.out.println("Error al cargar el archivo(controlador)");
+            System.out.println("Error al cargar el archivo matrícula(controlador)");
         }
     }
     

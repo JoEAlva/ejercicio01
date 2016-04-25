@@ -29,11 +29,11 @@ public class ArchivosEstudiante {
         try
         {
             salida = new ObjectOutputStream( new FileOutputStream("archivosEstudiante.dat") );
-            System.out.println("Se creó el archivo correctamente");
+            System.out.println("Se creó el archivo estudiante correctamente");
         }
         catch(Exception ex)
         {
-            System.out.println("No se creó el archivo " + ex);
+            System.out.println("No se creó el archivo estudiante " + ex);
         }
     }//End crearArchivosUsuario
     
@@ -45,11 +45,11 @@ public class ArchivosEstudiante {
         try
         {
             salida.writeObject(estudiante);
-            System.out.println("Se escribió en el archivo");
+            System.out.println("Se escribió en el archivo estudiante");
         }
         catch(Exception ex)
         {
-            System.out.println("Error al escribir en el archivo " + ex);
+            System.out.println("Error al escribir en el archivo estudiante " + ex);
         }
     }//End addInfoFileStudent
     

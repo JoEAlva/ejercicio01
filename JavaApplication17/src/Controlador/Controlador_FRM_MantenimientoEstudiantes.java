@@ -33,10 +33,10 @@ public class Controlador_FRM_MantenimientoEstudiantes implements ActionListener{
         
         if(estudianteArchivos.cargarInfoArchivoEstudiante())
         {
-            System.out.println("Se cargó el archivo correctamente");
+            System.out.println("Se cargó el archivo estudiante correctamente");
         }else
         {
-            System.out.println("Error al cargar el archivo(controlador)");
+            System.out.println("Error al cargar el archivo estudiante(controlador)");
         }
         
         metodos.arrayEstudiantes = estudianteArchivos.leerInfoArchivoEstudiante();

@@ -27,12 +27,13 @@ public class Controlador_FRM_MantenimientoCursos implements ActionListener{
         metodos = new MetodosCursos();
         cursosArchivos = new ArchivosCursos();
         
-        if(cursosArchivos.cargarInfoCursosArchivo()) {
-            System.out.println("Se cargó el archivo(controlador)");
+        if(cursosArchivos.cargarInfoCursosArchivo())
+        {
+            System.out.println("Se cargó el archivo curso(controlador)");
         }
         else
         {
-            System.out.println("No se cargó el archivo(controlador)");
+            System.out.println("No se cargó el archivo curso(controlador)");
         }
         
         metodos.arrayCursos = cursosArchivos.leerInfoCursosArchivo();

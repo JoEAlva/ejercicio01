@@ -63,6 +63,9 @@
     <Component class="javax.swing.JTextField" name="jT_Usuario">
     </Component>
     <Component class="javax.swing.JPasswordField" name="jP_Contrasena">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="jT_pass" noResource="true"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jL_Contrasena">
       <Properties>

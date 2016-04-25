@@ -15,14 +15,16 @@ public class MetodosUsuario
 {
     
     //Se declaran las variables
-    ArrayList<Usuario> arrayUsuario;
+    private ArrayList<Usuario> arrayUsuario;
     public String arregloUsuario[];
+    ArchivosUsuario archivosUsuario;
     
     //Constructor de la clase
     public MetodosUsuario()
     {
         arrayUsuario = new ArrayList<Usuario>();
         arregloUsuario = new String[4];
+        archivosUsuario = new ArchivosUsuario();
     }
     
     
@@ -120,4 +122,32 @@ public class MetodosUsuario
                                 + " Costa Rica", JOptionPane.OK_OPTION);
     }
     
+    public void leerArchivo()
+    {
+        archivosUsuario.crearArchivoUsuario();
+        for(int contador = 0; contador<arrayUsuario.size(); contador++)
+        {
+            this.archivosUsuario.escribirArchivoUsuario(arrayUsuario.get(contador));
+        }
+    }
+
+    public ArrayList<Usuario> getArrayUsuario() {
+        ArrayList<Usuario> arrayTemporal = new ArrayList<Usuario>();
+        for(int contador = 0; contador<arrayUsuario.size(); contador++)
+        {
+            
+            this.archivosUsuario.escribirArchivoUsuario(arrayUsuario.get(contador));
+        }
+    
+        return arrayTemporal;
+    }
+    
+    
+
+    public void setArrayUsuario(ArrayList<Usuario> arrayUsuario) {
+        this.arrayUsuario = arrayUsuario;
+    }
+    
+    
+        
 }//Fin de MetodosUsuario
