@@ -24,9 +24,9 @@ public class Controlador_FRM_MantenimientoCursos implements ActionListener{
     public Controlador_FRM_MantenimientoCursos(FRM_MantenimientoCursos frm_MantenimientoCursos)//Constructor
     {
         this.frm_MantenimientoCursos= frm_MantenimientoCursos;
-        metodos = new MetodosCursos();
         cursosArchivos = new ArchivosCursos();
-        
+        metodos = new MetodosCursos(cursosArchivos);
+                
         if(cursosArchivos.cargarInfoCursosArchivo())
         {
             System.out.println("Se cargó el archivo curso(controlador)");

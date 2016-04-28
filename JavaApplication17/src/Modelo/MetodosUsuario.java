@@ -20,11 +20,11 @@ public class MetodosUsuario
     ArchivosUsuario archivosUsuario;
     
     //Constructor de la clase
-    public MetodosUsuario()
+    public MetodosUsuario(ArchivosUsuario archivosUsuario)
     {
         arrayUsuario = new ArrayList<Usuario>();
         arregloUsuario = new String[4];
-        archivosUsuario = new ArchivosUsuario();
+        this.archivosUsuario = archivosUsuario;
     }
     
     
@@ -135,7 +135,6 @@ public class MetodosUsuario
         ArrayList<Usuario> arrayTemporal = new ArrayList<Usuario>();
         for(int contador = 0; contador<arrayUsuario.size(); contador++)
         {
-            
             this.archivosUsuario.escribirArchivoUsuario(arrayUsuario.get(contador));
         }
     

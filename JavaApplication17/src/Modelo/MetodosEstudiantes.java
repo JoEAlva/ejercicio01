@@ -20,10 +20,10 @@ public class MetodosEstudiantes {
     ArchivosEstudiante estudianteArchivos;
     FRM_MantenimientoEstudiantes fRM_MantenimientoEstudiantes;
     
-    public MetodosEstudiantes()
+    public MetodosEstudiantes(ArchivosEstudiante estudianteArchivos)
     {
         arrayEstudiantes=new ArrayList <Estudiante>();
-        estudianteArchivos = new ArchivosEstudiante();
+        this.estudianteArchivos = estudianteArchivos;
         //arrayEstudiantes = archivosEstudiante.leerInfoArchivoEstudiante();
     }
     public void agregarEstudiante(String informacion[])

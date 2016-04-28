@@ -5,8 +5,8 @@
  */
 package Controlador;
 
-import Vista.FRM_MantenimientoCursos;
 import Vista.FRM_MantenimientoEstudiantes;
+import Vista.FRM_MantenimientoCursos;
 import Vista.FRM_Matricula;
 import Vista.FRM_MantenimientoUsuarios;
 import Vista.FRM_UsuarioLogin;
@@ -22,18 +22,15 @@ public class Controlador_FRM_MenuPrincipal implements ActionListener{
     FRM_MantenimientoEstudiantes mantenimientoEstudiantes;
     FRM_MantenimientoCursos mantenimientoCursos;
     FRM_Matricula matricula;
-    FRM_MantenimientoUsuarios fRM_MantenimientoUsuarios;
-    FRM_UsuarioLogin fRM_UsuarioLogin;
-    
+    FRM_MantenimientoUsuarios fRM_MantenimientoUsuarios;   
     
     public Controlador_FRM_MenuPrincipal()
     {
         mantenimientoEstudiantes=new FRM_MantenimientoEstudiantes();
         mantenimientoCursos=new FRM_MantenimientoCursos();
         fRM_MantenimientoUsuarios = new FRM_MantenimientoUsuarios();
-        matricula= new FRM_Matricula(mantenimientoEstudiantes,mantenimientoCursos);
-        fRM_UsuarioLogin = new FRM_UsuarioLogin(fRM_MantenimientoUsuarios);
-        this.fRM_UsuarioLogin.setVisible(true);
+        fRM_MantenimientoUsuarios = new FRM_MantenimientoUsuarios();
+        matricula= new FRM_Matricula(mantenimientoEstudiantes,mantenimientoCursos);       
         
     }
     

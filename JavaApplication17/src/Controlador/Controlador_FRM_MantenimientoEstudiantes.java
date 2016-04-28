@@ -27,9 +27,9 @@ public class Controlador_FRM_MantenimientoEstudiantes implements ActionListener{
     public Controlador_FRM_MantenimientoEstudiantes(FRM_MantenimientoEstudiantes mantenimientoEstudiantes)
     {
         this.mantenimientoEstudiantes=mantenimientoEstudiantes;
-        metodos = new MetodosEstudiantes();
         estudianteArchivos = new ArchivosEstudiante();
-        
+        metodos = new MetodosEstudiantes(estudianteArchivos);
+                
         
         if(estudianteArchivos.cargarInfoArchivoEstudiante())
         {
@@ -89,7 +89,8 @@ public class Controlador_FRM_MantenimientoEstudiantes implements ActionListener{
             
     }
     
-    public void consultaRapida() {
+    public void consultaRapida()
+    {
         
         if(metodos.consultarEstudiante(mantenimientoEstudiantes.devolverCedula()))
             {

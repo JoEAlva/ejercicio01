@@ -18,10 +18,10 @@ public class MetodosCursos {
     String arregloInformacionConsultada[]=new String[3];
     ArchivosCursos cursosArchivos;
     
-    public MetodosCursos()
+    public MetodosCursos(ArchivosCursos cursosArchivos)
     {
         arrayCursos=new ArrayList <Cursos>();
-        cursosArchivos=new ArchivosCursos();
+        this.cursosArchivos = cursosArchivos;
     }
     public void agregarCurso(String informacion[])
     {

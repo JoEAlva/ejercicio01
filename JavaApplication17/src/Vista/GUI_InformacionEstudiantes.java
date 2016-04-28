@@ -139,6 +139,7 @@ public class GUI_InformacionEstudiantes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jt_CedulaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jt_CedulaKeyPressed
+        System.out.println("Tecla "+evt.getKeyChar()+" Código"+evt.getKeyCode());
         if(evt.getKeyCode() == 10)
         {
             cfrmme.consultaRapida();

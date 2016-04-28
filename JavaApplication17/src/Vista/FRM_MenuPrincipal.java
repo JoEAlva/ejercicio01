@@ -23,6 +23,7 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
         initComponents();
         this.setLocation(100, 100);
         controlador_FRM_MenuPrincipal = new Controlador_FRM_MenuPrincipal();
+
                
         agregarEventos();
     }  
@@ -151,17 +152,18 @@ public class FRM_MenuPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                boolean a=true;
-                
-                if(a)
+                if(true)
                 {
                     new FRM_MenuPrincipal().setVisible(true);
+                    System.out.println("Mostró");
                 }
                 else
                 {
-                    System.out.println("Hola");
+                    new FRM_MenuPrincipal().setVisible(false);
+                    System.out.println("No mostró");
+
                 }
-                
+                   
             }
         });
     }

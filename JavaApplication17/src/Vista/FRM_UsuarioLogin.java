@@ -17,7 +17,7 @@ public class FRM_UsuarioLogin extends javax.swing.JFrame {
     Controlador_FRM_UsuarioLogin controlador_FRM_UsuarioLogin;
     MetodosUsuario metodosUsuario;
     
-    public FRM_UsuarioLogin(FRM_MantenimientoUsuarios fRM_MantenimientoUsuarios) {
+    public FRM_UsuarioLogin() {
         initComponents();
         controlador_FRM_UsuarioLogin = new Controlador_FRM_UsuarioLogin(this);
         this.gUI_LoginUsuario1.agregarEventos(controlador_FRM_UsuarioLogin);
@@ -64,6 +64,7 @@ public class FRM_UsuarioLogin extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

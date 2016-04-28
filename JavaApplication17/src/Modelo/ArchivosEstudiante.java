@@ -16,7 +16,8 @@ import java.util.ArrayList;
  *
  * @author JorgeIgnacio
  */
-public class ArchivosEstudiante {
+public class ArchivosEstudiante 
+{
     
     ObjectOutputStream salida;
     ObjectInputStream entrada;
@@ -95,6 +96,6 @@ public class ArchivosEstudiante {
         
         return arrayEstudiante;
         
-    }
+    }//leerInfoArchivoEstudiente
     
 }

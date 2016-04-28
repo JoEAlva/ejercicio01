@@ -33,9 +33,7 @@ public class Controlador_FRM_UsuarioLogin implements ActionListener
     {
         if(e.getActionCommand().equals("Login"))
         {
-             
-            metodosLogin.comprobarContrasena(fRM_UsuarioLogin.devolverInfoLogin());
-            System.out.println("Funciona");
+           
         }
     }
 }

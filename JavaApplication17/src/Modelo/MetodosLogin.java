@@ -18,8 +18,12 @@ public class MetodosLogin {
     MetodosUsuario metodosUsuario;
     public MetodosLogin() {
          arrayUsuarioLogin = new ArrayList<Usuario>();
+         
     }
-           
+      
+    /*
+    
+    */
     public boolean comprobarContrasena(String arregloLogin[])
     {
         
@@ -37,5 +41,13 @@ public class MetodosLogin {
             
         }
         return correcta;
+    }//Fin comprobarContrasena
+    
+    public boolean prueba() {
+        boolean existe = true;
+        return true;
     }
+    
+    
+    
 }

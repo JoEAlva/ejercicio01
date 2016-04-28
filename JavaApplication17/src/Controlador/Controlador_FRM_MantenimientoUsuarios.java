@@ -25,8 +25,9 @@ public class Controlador_FRM_MantenimientoUsuarios implements ActionListener
     // Contructor
     public Controlador_FRM_MantenimientoUsuarios(FRM_MantenimientoUsuarios fRM_MantenimientoUsuarios) { 
         this.fRM_MantenimientoUsuarios=fRM_MantenimientoUsuarios;
-        metodosUsuario=new MetodosUsuario();
         archivosUsuario = new ArchivosUsuario();
+        metodosUsuario=new MetodosUsuario(archivosUsuario);
+        
         if(archivosUsuario.cargarArchivoUsuario())
         {
             System.out.println("Se cargó el archivo usuario correctamente(controlador)");
